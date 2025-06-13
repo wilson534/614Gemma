@@ -1,0 +1,88 @@
+{
+  "name": "neuralink-google-ai-core",
+  "version": "1.0.0",
+  "description": "心灵纽带NeuraLink - Google AI核心技术模块，基于Google Gemini 2.5 Pro和Imagen 3.0的智能亲子情感交互系统",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "start": "node dist/index.js",
+    "demo:health": "ts-node examples/healthAnalysisDemo.ts",
+    "demo:image": "ts-node examples/imageGenerationDemo.ts",
+    "demo:gemma": "ts-node examples/gemmaLocalDemo.ts"
+  },
+  "keywords": [
+    "Google AI",
+    "Gemini 2.5 Pro",
+    "Imagen 3.0",
+    "Gemma",
+    "AI亲子教育",
+    "情感分析",
+    "智能育儿",
+    "儿童健康",
+    "图像生成",
+    "本地AI",
+    "TypeScript",
+    "Node.js"
+  ],
+  "author": {
+    "name": "心灵纽带NeuraLink技术团队",
+    "email": "tech@neuralink-ai.com",
+    "url": "https://github.com/neuralink-ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neuralink-ai/neuralink-google-ai-core.git"
+  },
+  "homepage": "https://github.com/neuralink-ai/neuralink-google-ai-core#readme",
+  "bugs": {
+    "url": "https://github.com/neuralink-ai/neuralink-google-ai-core/issues"
+  },
+  "dependencies": {
+    "@google-cloud/aiplatform": "^3.20.0",
+    "google-ai-generativelanguage": "^2.0.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/src", "<rootDir>/tests"],
+    "testMatch": ["**/__tests__/**/*.ts", "**/?(*.)+(spec|test).ts"],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.d.ts"
+    ]
+  }
+} 
